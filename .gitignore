@@ -1,0 +1,6 @@
+data/
+tokens.txt
+.venv/
+__pycache__/
+*.pyc
+.python-version
