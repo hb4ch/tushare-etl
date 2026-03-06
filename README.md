@@ -20,11 +20,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create a `tokens.txt` file in the project root containing your Tushare API token:
+Create a `tokens.txt` file in the project root. The file should contain **only** your Tushare Pro API token as plain text (no key name, no quotes, no newline needed):
+
+```
+a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6
+```
 
 ```bash
-echo "your_tushare_token_here" > tokens.txt
+echo "your_tushare_pro_token" > tokens.txt
 ```
+
+You can get your token from [Tushare Pro - Token Management](https://tushare.pro/user/token). The code reads the file with `open("tokens.txt").read().strip()` and passes it directly to `ts.set_token()`.
 
 ## Usage
 
